@@ -10,14 +10,16 @@ Code, Compile, Run and Debug online from anywhere in world.
 
 
 
-public class RadixPass
+public class Main
 {
     
     
     public static void oneRadixPass(int[] a,int[] a2,int[] count,int[] pos,int radix){
         //位置、个数的数组置零
-        Arrays.fill(count,0);
-        Arrays.fill(pos,0);
+        for(int i=0;i<pos.length;i++){
+            pos[i]=0;
+            count[i]=0;
+        }
         
         //遍历a的radix位,计数同数个数于count
         for(int i=0;i<a.length;i++){
@@ -39,8 +41,8 @@ public class RadixPass
     }
     
 	public static void main(String[] args) {
-	    int[] a=[337,332,132,267,262,164,260,167];
-	    int[] b=new int[8];
+	    int[] a={337,332,132,267,262,164,260,167};
+	    int[] b=new int[a.length];
 	    int[] count=new int[10];
 	    int[] pos=new int[10];
 	    int redix=1;
